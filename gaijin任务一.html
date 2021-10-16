@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人信息</title>
+    <style>
+        sup{
+            color: red;
+        }
+        .yanse{
+            background-color: rgba(0, 248, 74, 0.822);
+            color: honeydew;
+            border-radius: 7px;
+            border-style: hidden;
+            
+          
+        }
+        
+    </style>
+    <script type="text/javascript">
+        function IsDate(sm,mystring){
+            var reg=/^(\d{4})-(\d{2})-(\d{2})$/;
+            var str=mystring;
+            var arr=reg.exec;
+            if(str=="") return true;
+            if(!reg.test(str)&&RegExp.$2<=12&&RegExp.$3<=31){
+                alert("请保证"+sm="中输入的日期格式为yyyy-mm-dd或正确的日期！");
+                return false;
+            }
+            return true;
+                
+        }
+    
+    </script>
+</head>
+<body>
+    <form>
+    
+    <table width="500" position="center">
+        <tr>
+            <td><sup>*</sup>请填写您的姓名:   </td>
+            <td><input type="text" name="username" size="40px"></td>
+        </tr>
+        <tr>
+            <td><sup>*</sup>请输入您的密码:</td>
+            <td><input type="password" name="pwd"size="40px"></td>
+        </tr>
+        <tr>
+            <td><sup>*</sup>请再次输入密码:</td>
+            <td><input type="password"size="40px"></td>
+        </tr>
+        <tr>
+            <td>请选择性别:</td>
+            <td><input size="40px" type="radio" name="sex" value="男" id="nan"><label for="nan">男</label><input type="radio" name="sex" value="女" id="nv"><label for="nv">女</label></td>
+        </tr>
+        <tr>
+            <td>请输入年龄:</td>
+            <td><input  size="40px" type="text"></td>
+        </tr>
+        <tr>
+            <td>请输入生日:</td>
+            <td><input type="text" size="40px" id="IsDate" name="IsDate" onblur="checkdate()" /></td>
+            <td><span id="dateerror"></span></td>
+        </tr>
+        <tr>
+            <td>请选择您的爱好:</td>
+            <td><input  type="radio" value="hobby" id="yyys"><label for="yyys">音乐影视</label><input type="radio"  value="hobby" id="wcny"><label for="wcny">外出旅游</label><input type="radio"  value="hobby" id="sjhd"><label for="sjhd">社交活动</label></td>
+        </tr>
+        <tr>
+            <td><sup>*</sup>请选择所在省市:</td>
+            <td><select style="width: 300px;height: 22px;" >
+                <option>请选择省市</option>
+                <option>请选择省市</option>
+                <option>请选择省市</option>
+                <option>请选择省市</option>
+                <option>请选择省市</option>
+                <option>请选择省市</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td >自我描述:</td>
+            <td><textarea  style="width: 300px;height: 70px;" >请填写其他任务....
+            </textarea> </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td style="text-align:center;"><input type="submit" value="提交信息" class="yanse"  ></td>
+        </tr>
+        
+    </table>
+</form>
+     
+</body>
+
+</html>
